@@ -1,0 +1,12 @@
+postgres:
+  host: '127.0.0.1'
+  port: 5432
+  username: 'username'
+  password: 'password'
+  database: 'database'
+  connMaxLifetime: 1h
+
+redis:
+  addr: '127.0.0.1:6379'
+  password: ''
+  db: 0
