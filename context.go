@@ -1,10 +1,11 @@
 package bint
 
 import (
+	"log/slog"
+
 	"github.com/gofiber/fiber/v3"
 	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
-	"log/slog"
 )
 
 // Context 自定义上下文

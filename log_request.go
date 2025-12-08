@@ -3,12 +3,13 @@ package bint
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
+	"time"
+
 	"github.com/gofiber/fiber/v3"
 	"github.com/gofiber/fiber/v3/binder"
 	"github.com/gofiber/fiber/v3/middleware/requestid"
 	"github.com/gofiber/utils/v2"
-	"log/slog"
-	"time"
 )
 
 type RequestLogger struct {

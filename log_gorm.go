@@ -3,10 +3,11 @@ package bint
 import (
 	"context"
 	"fmt"
-	"gorm.io/gorm/logger"
-	"gorm.io/gorm/utils"
 	"log/slog"
 	"time"
+
+	"gorm.io/gorm/logger"
+	"gorm.io/gorm/utils"
 )
 
 type gormLogger struct {
