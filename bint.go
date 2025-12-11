@@ -25,6 +25,7 @@ func NewBint(cfg *Config) *Bint {
 	instance := &Bint{
 		app: fiber.New(),
 		log: logger,
+		cfg: cfg,
 	}
 	instance.app.Use(
 		cors.New(),
