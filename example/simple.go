@@ -10,6 +10,7 @@ import (
 
 type UserHandler struct{}
 
+// Setup 配置根路径为 “/user”，第二个返回参数是 fiber 中间件
 func (u *UserHandler) Setup() (string, []bint.Handler) {
 	return "user", nil
 }
@@ -56,10 +57,10 @@ func main() {
 	// 初始应用
 	app := bint.
 		NewBint(cfg).                   // 传入配置 *bint.Config
-		SetControllers(&UserHandler{}). // 可以同时注册多个handler
+		SetControllers(&UserHandler{}). // 可以同时注册多个 handler
 		SetModels(&User{})              // 可同时注册多个数据模型
 
-	// 项目需要postgis插件
+	// 项目需要 postgis 插件
 	if err := app.DB().Exec(`CREATE EXTENSION IF NOT EXISTS postgis;`).Error; err != nil {
 		log.Fatal(err)
 	}
