@@ -83,6 +83,14 @@ func (b *Bint) Log() *slog.Logger {
 	return b.log
 }
 
+func (b *Bint) App() *fiber.App {
+	return b.app
+}
+
+func (b *Bint) Config() *Config {
+	return b.cfg
+}
+
 func (b *Bint) Run() error {
 	// 打印路由
 	routes := b.app.GetRoutes(true)
